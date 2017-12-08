@@ -1,0 +1,37 @@
+Release Notes for Cisco router simulator (Dynamips)
+===================================================
+
+Version:  v0.2.17
+
+Release date:  Monday, July 24st, 2017 (2017-07-24)
+
+Source code:  https://github.com/GNS3/dynamips/tree/v0.2.17
+
+License: GNU GPLv2
+
+
+What's New since v0.2.17
+========================
+
+* Set nonblocking I/O for UDP sockets
+* Fix tap interface usage on FreeBSD
+* Fix build on FreeBSD
+* NM-16ESW: process packets even if MAC address table is full. Fixes #72.
+
+Known Issues
+============
+
+Reload from the router console doesn't work.
+  - https://github.com/GNS3/dynamips/issues/6
+
+Using a self decompressing image can lead to an invalid IA and stop the cpu.
+  - https://github.com/GNS3/dynamips/issues/8
+
+Packet transmission rate is limited.
+  - https://github.com/GNS3/dynamips/issues/46
+
+c1700 IOS Images start once and then fail to boot on second boot
+  - https://github.com/GNS3/dynamips/issues/54
+
+There is lots of missing hardware functionality.
+There are memory leaks.
