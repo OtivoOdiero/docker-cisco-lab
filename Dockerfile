@@ -3,7 +3,7 @@ FROM alpine
 LABEL Author="jeffreystoke <jeffctor@gmal.com>"
 
 # use your favourite mirrors
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 
 # install necessary packages
 RUN apk add --update --no-cache \
