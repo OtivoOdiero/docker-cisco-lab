@@ -1,3 +1,5 @@
+.PHONY: prepare image
+
 prepare:
 	docker run --rm --tty --volume `pwd`/bin:/base debian:jessie sh /base/fetchlibc.sh
 

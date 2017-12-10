@@ -34,6 +34,4 @@ echo '127.0.0.127\txml.cisco.com' >> /etc/hosts
 rm -f $KEYGEN
 fi
 
-exec gns3server --config /home/gns3/server.conf > /home/gns3/server.log 2>&1 &
-
-exec /bin/sh
+exec gns3server --config /home/gns3/server.conf > /home/gns3/server.log 2>&1

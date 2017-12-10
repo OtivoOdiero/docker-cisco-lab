@@ -1,1 +1,12 @@
+version: "3"
+
 services:
+  cisco-lab:
+    image: "jeffctor/cisco-lab:latest"
+    ports:
+      - "3080:3080"
+      - "5000-5200:5000-5200"
+    volumes:
+      - ./projects:/projects
+      - ./images:/images
+      - ./appliances:/appliances

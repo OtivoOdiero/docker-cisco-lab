@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-LABEL Author="jeffreystoke <jeffctor@gmal.com>"
+LABEL maintainer="jeffreystoke <jeffctor@gmail.com>"
 
 # use your favourite mirrors
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
@@ -51,18 +51,17 @@ RUN mkdir -p ${IMAGES_DIR} ${APPLIANCES_DIR} ${PROJECTS_DIR} && \
     chmod -R a+x /usr/local/bin/ && \
     rm -rf ${BUILD_DIR} ${HOME}/server
 
-VOLUME [ "/appliances", "/projects"]
+VOLUME [ "/appliances", "/projects", "/images" ]
 
 # expose gns3 server port
 EXPOSE 3080
 # expose console port
 EXPOSE 5000-10000
-# expose snmp prot
-EXPOSE 161-162
-# expose ftp and tftp
-EXPOSE 20 21 69
 
 # setup entrypoint
 ADD ./scripts /
 RUN chmod +x /start.sh
+
+STOPSIGNAL SIGTERM
+
 ENTRYPOINT [ "/start.sh" ]
