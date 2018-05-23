@@ -66,7 +66,7 @@ Okay, now you are ready to go (just in a GNS3 way).
 0. clone this repo (or download zip file if git is not installed)
 
 ```bash
-$ git clone --recurse-submodules github.com/jeffreystoke/cisco-lab
+$ git clone --recurse-submodules https://github.com/jeffreystoke/docker-cisco-lab
 ```
 
 1. Extract 32bit lib from a debian container (you can ignore this step for there is already a extracted one in `bin`)
