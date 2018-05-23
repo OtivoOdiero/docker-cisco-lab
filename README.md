@@ -59,14 +59,14 @@ Okay, now you are ready to go (just in a GNS3 way).
 
 1. Docker 1.10+
 1. make (optional, for easy build steps)
-1. git (optional, for repo download)
+1. git
 
 ### Steps
 
 0. clone this repo (or download zip file if git is not installed)
 
 ```bash
-$ git clone github.com/jeffreystoke/cisco-lab
+$ git clone --recurse-submodules github.com/jeffreystoke/cisco-lab
 ```
 
 1. Extract 32bit lib from a debian container (you can ignore this step for there is already a extracted one in `bin`)
