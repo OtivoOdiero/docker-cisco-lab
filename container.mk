@@ -15,6 +15,7 @@ ubridge:
 
 iouyap:
 	sed -i -E 's/#include <net\/ethernet.h>/\#if defined\(\_\_UCLIBC\_\_\) \|\| defined\(\_\_GLIBC\_\_\)\n\#include \<net\/ethernet\.h\>\n\#endif/' iouyap/iouyap.c
+	sed -i '1s/^/\#include \<pthread\.h\>\n/' iouyap/iouyap.h
 	cd iniparser && \
 	$(MAKE) && \
 	cp libiniparser.* /usr/lib/ && \
