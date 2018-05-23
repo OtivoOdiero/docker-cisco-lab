@@ -1,3 +1,0 @@
--rrequirements.txt
-
-pypiwin32 # pyup: ignore

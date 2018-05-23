@@ -1,0 +1,15 @@
+[submodule "gns3-server"]
+	path = gns3server
+	url = https://github.com/GNS3/gns3-server.git
+[submodule "ubridge"]
+	path = ubridge
+	url = https://github.com/GNS3/ubridge
+[submodule "iouyap"]
+	path = iouyap
+	url = https://github.com/GNS3/iouyap.git
+[submodule "dynamips"]
+	path = dynamips
+	url = https://github.com/GNS3/dynamips.git
+[submodule "iniparser"]
+	path = iniparser
+	url = https://github.com/ndevilla/iniparser.git
