@@ -3,7 +3,7 @@ DYNAMIPS_CMAKE_FLAGS := \
 
 .PHONY: all dynamips ubridge iouyap init
 
-all: dynamips ubridge iouyap
+all: dynamips iouyap ubridge
 
 dynamips:
 	cd dynamips && \
