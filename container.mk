@@ -10,6 +10,7 @@ dynamips:
 	cmake $(DYNAMIPS_CMAKE_FLAGS) && $(MAKE) install
 
 ubridge:
+	sed -i '1s/^/\#include \<sys\/types\.h\>\n/' ubridge/netlink/nl.c
 	$(MAKE) -C ubridge install
 
 iouyap:
