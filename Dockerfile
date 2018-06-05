@@ -40,7 +40,7 @@ WORKDIR ${BUILD_DIR}
 
 # install necessary packages and build
 RUN apk add --update --no-cache \
-    python3 py3-psutil libelf-dev libpcap-dev linux-headers \
+    python3 py3-psutil py3-prompt_toolkit libelf-dev libpcap-dev linux-headers \
     libcap bison flex build-base make cmake wget tar xz sudo && \
     make && \
     cd /home/gns3/server && python3 setup.py install && \
