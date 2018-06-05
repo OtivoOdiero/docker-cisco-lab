@@ -30,7 +30,7 @@ $ docker run --name lab \
     -v $HOME/GNS3/projects:/projects \
     -v $HOME/GNS3/images:/images \
     -v $HOME/GNS3/appliances:/appliances \
-    cisco-lab
+    jeffctor/cisco-lab
 ```
 
 open your GNS3-GUI client go to __Preference__ -> __Server__

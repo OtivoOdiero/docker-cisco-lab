@@ -48,6 +48,8 @@ RUN apk add --update --no-cache \
     cd / && \
     rm -rf ${BUILD_DIR} ${HOME}/server
 
+RUN chown -R root:root /usr/local/bin
+
 VOLUME [ "/appliances", "/projects", "/images" ]
 
 # expose gns3 server port
