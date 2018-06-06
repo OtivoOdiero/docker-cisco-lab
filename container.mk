@@ -1,7 +1,7 @@
 DYNAMIPS_CMAKE_FLAGS := \
 	-DDYNAMIPS_CODE=stable -DCMAKE_C_COMPILER=/usr/bin/gcc
 
-.PHONY: all dynamips ubridge iouyap init
+.PHONY: all dynamips ubridge iouyap
 
 all: dynamips ubridge iouyap
 
@@ -10,7 +10,7 @@ dynamips:
 	cmake $(DYNAMIPS_CMAKE_FLAGS) && $(MAKE) install
 
 ubridge:
-	sed -i '1s/^/\#include \<sys\/types\.h\>\n/' ubridge/netlink/nl.c
+	sed -i '1s/^/\#include \<sys\/types\.h\>\n/' ubridge/src/netlink/nl.c
 	$(MAKE) -C ubridge install
 
 iouyap:
